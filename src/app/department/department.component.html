@@ -1,0 +1,25 @@
+<form>
+    <h2 [ngClass]="'one two'">Post data returned from API (https://jsonplaceholder.typicode.com/posts)</h2>
+
+        <table [ngClass]="'three'">
+          <tr>
+           <th>Id</th>
+           <th> User Id</th>
+           <th> Title</th>
+           <th> Body</th>
+          </tr>     
+          
+          <mat-spinner style="margin:0 auto;" *ngIf="showSpinner"></mat-spinner>
+          <tr>
+           <td [ngClass]="'three'">{{objPosts?.id}}</td>
+           <td [ngClass]="'three'">{{objPosts?.userId}}</td>
+           <td [ngClass]="'three'">{{objPosts?.title}}</td>
+           <td [ngClass]="'three'">{{objPosts?.body}}</td>
+           
+         </tr>
+         </table>  
+</form> 
+
+
+
+    

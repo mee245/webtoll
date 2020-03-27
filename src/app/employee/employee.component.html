@@ -1,0 +1,21 @@
+<h2 [ngClass]="'one two'">Getting data from API ("https://jsonplaceholder.typicode.com/posts/1/comments")</h2>
+    
+    <table [ngClass]="'three'"  border=1>
+  <tr>
+    <th>Id</th>
+    <th> Post Id</th>
+    <th> Name</th>
+    <th> Email</th>
+    <th> Body</th>
+  </tr>
+  
+  <mat-spinner style="margin:0 auto;" *ngIf="showSpinner"></mat-spinner>
+  <tr *ngFor="let em of employee">
+    <td>{{em.id}}</td>
+    <td>{{em.postId}}</td>
+    <td>{{em.name}}</td>
+    <td>{{em.email}}</td>
+    <td>{{em.body}}</td>
+    
+  </tr>
+</table>

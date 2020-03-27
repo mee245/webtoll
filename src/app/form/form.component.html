@@ -1,0 +1,38 @@
+
+<div>
+    <table class="table">
+        <div class="addContactControls">
+            <h2> Post new values</h2>
+          <input #id placeholder="id" type="text" [ngClass]="'input'"/>
+          <input #userid placeholder="userid" [ngClass]="'input'"/>
+          <input #title placeholder="title" [ngClass]="'input'"/>
+          <input #body placeholder="body"  [ngClass]="'input'"/>
+          <button class="btn btn-primary btn-xs" (click)="addContact(id,userid,title,body)" id="add">Add Data</button>
+      </div>
+      </table>
+    
+    <table class="table">
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Userid</th>
+              <th>Title</th>
+              <th>Body</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let contact of contacts" style="margin-bottom: 10px;">
+              <td>id{{contact.id}}</td>
+                <td>userid{{contact.userid}}</td>
+                <td>title{{contact.title}}</td>
+                <td>body{{contact.body}}</td>
+                <td><button class="btn btn-primary btn-xs" (click)="removeContact(contact)" [ngClass]="'five'">X</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+  
+  
+    
